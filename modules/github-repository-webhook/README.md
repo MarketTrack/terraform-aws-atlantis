@@ -27,7 +27,7 @@ No modules.
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------| :------: |
+|------|-------------|------|---------|:--------:|
 | <a name="input_create"></a> [create](#input\_create) | Whether to create Github repository webhook for Atlantis | `bool` | `true` | no |
 | <a name="input_repositories"></a> [repositories](#input\_repositories) | List of names of repositories which belong to the owner specified in `github_owner` | `list(string)` | `[]` | no |
 | <a name="input_webhook_secret"></a> [webhook\_secret](#input\_webhook\_secret) | Webhook secret | `string` | `""` | no |
