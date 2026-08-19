@@ -594,6 +594,7 @@ variable "service" {
         egress = {
           ip_protocol = "-1"
           cidr_ipv4   = "0.0.0.0/0"
+          description = "Allow all outbound traffic"
         }
       }
     )
