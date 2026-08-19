@@ -213,7 +213,7 @@ variable "alb" {
     # Listener(s)
     default_port              = optional(number, 80)
     default_protocol          = optional(string, "HTTP")
-    https_listener_ssl_policy = optional(string, "ELBSecurityPolicy-TLS13-1-2-2021-06")
+    https_listener_ssl_policy = optional(string, "ELBSecurityPolicy-TLS13-1-2-Res-2021-06")
     https_default_action = optional(any, {
       forward = {
         target_group_key = "atlantis"
