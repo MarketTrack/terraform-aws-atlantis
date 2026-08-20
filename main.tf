@@ -61,7 +61,6 @@ module "alb" {
       http-https-redirect = {
         port     = 80
         protocol = "HTTP"
-
         redirect = {
           port        = "443"
           protocol    = "HTTPS"
@@ -384,6 +383,7 @@ module "ecs_service" {
       atlantis = {
         from_port                    = var.atlantis.port
         protocol                     = "tcp"
+        description                  = "Allow Atlantis service traffic from load balancer"
         referenced_security_group_id = var.create_alb ? module.alb.security_group_id : var.alb_security_group_id
       }
     },
@@ -394,6 +394,7 @@ module "ecs_service" {
       egress = {
         ip_protocol = "-1"
         cidr_ipv4   = "0.0.0.0/0"
+        description = "Allow all outbound traffic"
       }
     }
   )
